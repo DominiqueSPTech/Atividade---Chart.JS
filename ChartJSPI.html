@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="ChartJSPI.css">
+</head>
+<body>
+    
+    <center>
+    <h1>DashBoard FarmGuard</h1>
+    </center>
+    <div id="div_sensor1" class="pai">
+        <p>Sensor 1</p>
+        <div>
+            <canvas id="canvas_linha"></canvas>
+        </div>
+        <div>
+            <canvas id="canvas_barra"></canvas>
+          </div>
+    </div>
+    <div id="div_sensor2" class="pai">
+        <p>Sensor 2</p>
+        <div>
+            <canvas id="canvas_linha2"></canvas>
+        </div>
+        <div>
+            <canvas id="canvas_barra2"></canvas>
+          </div>
+    </div>
+    
+</body>
+</html>
+<script>
+    // SCRIPT LINHA
+    const linha1 = document.getElementById('canvas_linha');
+  
+    new Chart(linha1, {
+      type: 'line',
+      data: {
+        labels: ['12:00', '13:00', '14:00', '15:00', '16:00', '17:00'],
+        datasets: [{
+          label: 'Temperatura',
+          data: [30, 29, 28, 25, 22, 23],
+          borderWidth: 1
+        },{
+          label: 'Umidade',
+          data: [80, 82, 80, 85, 80, 83],
+          borderWidth: 1
+        }
+    
+        ]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+
+    const linha2 = document.getElementById('canvas_linha2');
+  
+    new Chart(linha2, {
+      type: 'line',
+      data: {
+        labels: ['12:00', '13:00', '14:00', '15:00', '16:00', '17:00'],
+        datasets: [{
+          label: 'Temperatura',
+          data: [30, 29, 28, 25, 22, 23],
+          borderWidth: 1
+        },{
+          label: 'Umidade',
+          data: [80, 82, 80, 85, 80, 83],
+          borderWidth: 1
+        }
+    
+        ]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+
+    // SCRIPT BARRA
+    
+  const barra1 = document.getElementById('canvas_barra');
+
+  new Chart(barra1, {
+    type: 'bar',
+    data: {
+      labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho'],
+      datasets: [{
+        label: 'Temperatura',
+        data: [22, 24, 27, 23, 20, 18],
+        borderWidth: 1
+      },{
+        label: 'Umidade',
+        data: [90, 89, 93, 87, 88, 82],
+        borderWidth: 1
+      }
+    ]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+
+  const barra2 = document.getElementById('canvas_barra2');
+
+  new Chart(barra2, {
+    type: 'bar',
+    data: {
+      labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho'],
+      datasets: [{
+        label: 'Temperatura',
+        data: [22, 24, 27, 23, 20, 18],
+        borderWidth: 1
+      },{
+        label: 'Umidade',
+        data: [90, 89, 93, 87, 88, 82],
+        borderWidth: 1
+      }
+    ]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+
+  </script>
+   
